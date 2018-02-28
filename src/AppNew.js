@@ -11,7 +11,7 @@ class AppNew extends Component {
         <BrowserRouter>
         <div>
            <Route path={"/"} component={Root}/>
-           <Route path={"/user"} component={User}/>
+           <Route path={"/user/:id"} component={User}/>
            <Route exact path={"/home"} component={HomeNew}/>
          </div>
         </BrowserRouter>
