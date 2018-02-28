@@ -5,7 +5,13 @@ import { Home } from './components/Home';
 
 
 class App extends Component {
+  
+
   render() {
+    let user = {
+      name: "Mike",
+      hobbies: ['Sports', 'Cars']
+    }
     return (
       <div className='container'>
         <div className='row'>
@@ -13,6 +19,8 @@ class App extends Component {
             <Header />
           </div>
           <div className='col-xs-10 col-xs-offset-1'>
+            <Home name={"Max"} age={27} />
+              <p> This is a Child Prop</p>
             <Home />
           </div>
         </div>
