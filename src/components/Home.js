@@ -3,8 +3,15 @@ import PropTypes from 'prop-types';
 
 export class Home extends React.Component{
    constructor(props){
-      super(props)
-    }
+      super();
+      this.age = props.age;
+      this.onMakeAgeOlder = this.onMakeAgeOlder.bind(this);
+   }
+   
+   onMakeAgeOlder(){
+      this.age +=3;
+      console.log(this.age);
+   }
    render(){
       console.log(this.pros);
       return (
@@ -12,18 +19,9 @@ export class Home extends React.Component{
             <div className='row'>
                <h3> Hey Hey</h3>
                <p>Name: {this.props.name}</p>
-               <p>Age:{this.props.age}</p>
+               <p>Age:{this.age}</p>
                <p>{this.props.children}</p>
-               {/* <p>User: {this.props.user.name}</p>
-               <div> 
-                  <p> Hobbies </p>
-                  <ul>
-                     {this.props.user.hobbies.map((hobby, i) => {
-                        <li key="{i}"> { hobby} </li>
-                     }
-                     )}
-                  </ul>
-               </div> */}
+               <button onClick={this.onMakeAgeOlder} className='btn btn-primary'>Inc Age</button>
             </div>
          </div>
       );

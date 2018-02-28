@@ -8,10 +8,7 @@ class App extends Component {
   
 
   render() {
-    let user = {
-      name: "Mike",
-      hobbies: ['Sports', 'Cars']
-    }
+
     return (
       <div className='container'>
         <div className='row'>
