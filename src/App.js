@@ -6,6 +6,9 @@ import { Home } from './components/Home';
 
 class App extends Component {
   
+  onGreet(){
+    console.log("Say Hey From Mother Component");
+  }
 
   render() {
 
@@ -13,10 +16,10 @@ class App extends Component {
       <div className='container'>
         <div className='row'>
           <div className='col-xs-10 col-xs-offset-1'>
-            <Header />
+            <Header homeLink="Home"/>
           </div>
           <div className='col-xs-10 col-xs-offset-1'>
-            <Home name={"Max"} initialAge={27} />
+            <Home name={"Max"} initialAge={27}greet={this.onGreet}/>
               <p> This is a Child Prop</p>
             <Home />
           </div>

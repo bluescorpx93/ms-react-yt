@@ -1,14 +1,13 @@
 import React from 'react';
-export class Header extends React.Component{
-   render(){
-      return (
-         <nav className='navbar navbar-default'>
-            <div className='container'>
-               <ul className='navbar-header'>
-                  <li> <a href='/'>Home</a></li>
-               </ul>
-            </div>
-         </nav>
-      );
-   }
+export const Header = (props) => {
+
+   return (
+      <nav className='navbar navbar-default'>
+         <div className='container'>
+            <ul className='navbar-header'>
+               <li> <a href='/'>{props.homeLink}</a></li>
+            </ul>
+         </div>
+      </nav>
+   );
 }
