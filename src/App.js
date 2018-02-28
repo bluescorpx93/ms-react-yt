@@ -16,7 +16,7 @@ class App extends Component {
             <Header />
           </div>
           <div className='col-xs-10 col-xs-offset-1'>
-            <Home name={"Max"} age={27} />
+            <Home name={"Max"} initialAge={27} />
               <p> This is a Child Prop</p>
             <Home />
           </div>
