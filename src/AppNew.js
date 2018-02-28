@@ -10,9 +10,9 @@ class AppNew extends Component {
      return (
         <BrowserRouter>
         <div>
-           <Root/>
+           <Route path={"/"} component={Root}/>
            <Route path={"/user"} component={User}/>
-           <Route exact path={"/"} component={HomeNew}/>
+           <Route exact path={"/home"} component={HomeNew}/>
          </div>
         </BrowserRouter>
       //   <Root>
