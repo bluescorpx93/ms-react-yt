@@ -18,7 +18,8 @@ const reducer = (state, action) => {
       case "ADD":
          state = state + action.payload;
          break;
-      case 'SUBSTRACT':
+      case 'SUBTRACT':
+      state = state - action.payload;
          break;
    }
    return state;
@@ -32,4 +33,14 @@ store.subscribe(()=>{
 store.dispatch({
    type: "ADD",
    payload: 10
+});
+
+store.dispatch({
+   type: "ADD",
+   payload: 22
+});
+
+store.dispatch({
+   type: "SUBTRACT",
+   payload: 45
 });
