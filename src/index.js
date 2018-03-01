@@ -1,10 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import AppNewReduxEx from './AppNewReduxEx';
+// import registerServiceWorker from './registerServiceWorker';
+
+
 // import App from './App';
-import AppNew from './AppNew';
-import registerServiceWorker from './registerServiceWorker';
+// import AppNew from './AppNew';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 // ReactDOM.render(<Root/>, document.getElementById('rootnew'));
-registerServiceWorker();
+
+
+// registerServiceWorker();
+import {createStore} from "redux";
+const reducer = (state, action) => {
+   switch (action.type){
+      case "ADD":
+         state = state + action.payload;
+         break;
+      case 'SUBSTRACT':
+         break;
+   }
+   return state;
+}
+const store = createStore(reducer,1);
+
+store.subscribe(()=>{
+   console.log("Store Updated "+ store.getState());
+})
+
+store.dispatch({
+   type: "ADD",
+   payload: 10
+});
