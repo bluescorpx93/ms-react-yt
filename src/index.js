@@ -12,7 +12,7 @@
 
 
 // registerServiceWorker();
-import {createStore, combineReducers} from "redux";
+import {createStore, combineReducers, applyMiddleware} from "redux";
 
 const mathReducer = (state = {
    result: 1,
@@ -57,7 +57,11 @@ const userReducer = (state = {
    return state;
 }
 
-const store = createStore(combineReducers({mathReducer, userReducer}));
+const myLogger = (store) => (next) => (action) =>{
+      console.log("Logged Action: ", action)
+}
+
+const store = createStore(combineReducers({mathReducer, userReducer}), {}, applyMiddleware(myLogger));
 
 store.subscribe(()=>{
    console.log("Store Updated "+ store.getState());
