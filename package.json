@@ -2,6 +2,9 @@
   "name": "react-basics",
   "version": "0.1.0",
   "private": true,
+  "author": "Toufiq (https://twitter.com/burningraven06)",
+  "description" : "React Basic Workflow ",
+  "keywords" : ["react",  "reactjs",  "javascript",  "components "],
   "dependencies": {
     "prop-types": "^15.6.1",
     "pug": "^2.0.0-rc.4",
